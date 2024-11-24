@@ -16,3 +16,20 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
     show-sql: true
+  mail:
+    host: localhost
+    port: 2525
+    username: PoriaDeveloper@gmail.com
+    password: PoriaSherafatian0902717373913821022
+
+    properties:
+      mail:
+        smtp:
+          ssl:
+            trust: "*"
+          auth: true
+          starttls:
+            enable: true
+          connectiontimeout: 5000
+          timeout: 3000
+          writetimeout: 5000

@@ -31,6 +31,7 @@ public class AppUserService implements UserDetailsService {
     public String signUpUser(AppUser appUser) {
         boolean userExists = appUserRepository.findByEmail(appUser.getEmail())
                 .isPresent();
+
         if (userExists) {
             throw new IllegalStateException("Email already in use");
         }
@@ -47,8 +48,11 @@ public class AppUserService implements UserDetailsService {
         );
         confirmationTokenService
                 .saveConfirmationToken(confirmationToken);
-        //TODO : Send Email
         return token;
+    }
+
+    public int enableAppUser(String email) {
+        return appUserRepository.enableAppUser(email);
     }
 
 }
