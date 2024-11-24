@@ -20,7 +20,7 @@ spring:
     host: localhost
     port: 2525
     username: PoriaDeveloper@gmail.com
-    password: PoriaSherafatian0902717373913821022
+    password: password
 
     properties:
       mail:
